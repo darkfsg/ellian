@@ -1,0 +1,21 @@
+.card {
+  position: relative; /* Establish stacking context */
+  z-index: 5;       /* Place it on top of the petals */
+  cursor: pointer;    /* Show it's clickable */
+}
+
+.card-image {
+  display: block;
+  max-width: 280px; /* Slightly larger */
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  /* A drop-shadow respects transparency and gives depth */
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    max-width: 220px;
+  }
+}

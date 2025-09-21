@@ -1,0 +1,11 @@
+.intro-letter {
+  font-size: 5rem;
+  font-weight: bold;
+  transform-origin: bottom; /* Helps with the flip animation */
+}
+
+@media (max-width: 768px) {
+  .intro-letter {
+    font-size: 3rem;
+  }
+}

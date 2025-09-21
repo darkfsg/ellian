@@ -1,0 +1,21 @@
+.petal-pile-container {
+  /* This container is just a boundary */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4; /* Behind the card */
+  pointer-events: none;
+}
+
+.interactive-petal {
+  /* Explicitly position the origin of each petal in the exact center */
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  /* Framer Motion's x/y transforms will now be relative to this center point */
+  width: 90px;
+  height: auto;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}

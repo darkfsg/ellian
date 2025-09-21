@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.letter-paper {
+  background-color: #fdfdfd;
+  padding: 2rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  max-width: 90vw;
+  transform-style: preserve-3d; /* Needed for the 3D rotation */
+}
+
+.letter-content .letter-line {
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+  color: #333;
+  margin: 1rem 0;
+  line-height: 1.4;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hardware acceleration for the animated letters */
+.letter-content .letter-line > span {
+  will-change: transform, opacity;
+}
+
+
+
+.letter-content .signature {
+  text-align: right;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .letter-paper {
+    width: auto; /* Let padding and max-width define the size */
+    max-width: 85vw;
+    padding: 2rem 1.5rem;
+  }
+
+  .letter-content .letter-line {
+    font-size: 1.6rem;
+  }
+
+  .letter-content .signature {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+}
